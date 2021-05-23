@@ -1,13 +1,13 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { Dimensions, StyleSheet, Text, View, SafeAreaView, TextInput, Platform, Button   } from 'react-native';
+import { Dimensions, StyleSheet, Text, View, SafeAreaView, TextInput, Platform, Button, PixelRatio   } from 'react-native';
 
 export default function App() {
   return (
     <SafeAreaView style={styles.container}>
       <Text style = {{fontSize: 30, fontWeight: 'bold'}}>Dealshare</Text>
       <StatusBar style="auto" />
-      <SafeAreaView style = {[styles.loginMenu, {width: "25%", height: "50%", marginTop: "10%", padding: 20}]}>
+      <SafeAreaView style = {[styles.loginMenu, {width: PixelRatio.getPixelSizeForLayoutSize(300), height: PixelRatio.getPixelSizeForLayoutSize(400), marginTop: "10%", padding: 20}]}>
         <Text style = {{fontWeight: 'bold', fontSize: 30, textAlign: 'center'}}>Sign up</Text>
         <TextInput style = {styles.inputBox} placeholder = "Username"></TextInput> 
         <TextInput style = {styles.inputBox} placeholder = "Email"></TextInput>
